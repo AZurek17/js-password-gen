@@ -22,77 +22,43 @@ var minLength = 8;
 var maxLength = 128;
 
 function generatePassword() {
-  var passwordLength = prompt("Pick a number between " + minLength + ", and " + maxLength + " characters"); 
-     if (passwordLength < minLength || passwordLength > maxLength) {
-      confirm("Pick a number between  " + minLength + " - " + maxLength);
-      generatePassword();
-     }  
-     
-    else {
-    var lowerCase = confirm("Do you want to use lowercase characters?");
-    var upperCase = confirm("Do you want to use uppercase characters?");
-    var numCase = confirm("Do you want to use numbers characters?");
-    var specialCase = confirm("Do you want to use special characters?");
-     }
-}  
-
-  // prompt; {
-  //         passwordLength >= minLength && passwordLength <= maxLength; 
-
-  //         if passwordLength = function (num) {
-  //           return
-  //         } 
-  //         alert("Needs to be between  " + minLength + " - " + maxLength); 
-  //         }
-  //       }
-  //   prompt("Do you want to use uppercase characters? YES, click OK, NO, click Cancel");
-            
-     
-   
-          
-          
-        
-    
-      
-  
-     // if (userInput !== (maxLength)); {
-     //   prompt("too many characters, 128 characters max");
-     // }
-    
-
-generatePassword()  
-  // (confirm (passwordLength < 8));
-  //  lowerCase = prompt("Do you want to use lowercase characters? YES, click OK, NO, click Cancel");
-  //   If 
-  //  upperCase = prompt("Do you want to use uppercase characters? YES, click OK, NO, click Cancel");
-  
-  //  
-  //  ;
-  //  prompt("How many characters do you want. Must be a minimum of 8 characters, and max 128 characters");
-  
-  //  return
-  
-  //    if (userImput !== minlength); {
-        
-  //       return false
-  //    if (userImput >= maxLength);  
-        
-      
-  //  }
-   
-
-   //     return 
-    //     } else {
-    //       prompt( )
-  
-    //     }
-    // }
-  
-// prompt user with a questions of how many charcters
+  var passwordLength = prompt("Pick a number between " + minLength + ", and " + maxLength); 
 // if charaters under 8 and over 128 characters, then invalid response
-// confirm whether user wants uppercase letters in password
-// confirm whether user wants lower letters in password
-// confirm whether user wants special letters in password
+     if (passwordLength < minLength || passwordLength > maxLength) { 
+      confirm("Pick a number between  " + minLength + " - " + maxLength);
+     // generatePassword();
+    }
+      else { 
+      var lowerCase = confirm("Do you want to use lowercase characters?");
+      var upperCase = confirm("Do you want to use uppercase characters?");
+      var numCase = confirm("Do you want to use numbers characters?");
+      var specialCase = confirm("Do you want to use special characters?");
+      }
+
+      if (!lowerCase && !upperCase && !numCase && !specialCase); {
+      alert("You must chose one charcter type");
+      alert("Let's start over");
+      generatePassword();
+      }
+    }
+
+      var lowerCaseChar = ("abcdefghijklmnopqustuvwxyz");
+      var upperCaseChar = ("ABCDEFGHIJKLMNOPQURSTVWYZ");
+      var numCaseCha = ("0123456789");
+      var specialCaseCha = ("!@#$%^&*()_+");
+     
+      
+     
+    
+
+   
+// prompt user with a questions about password charcters and store respones in variables
+    
+ 
+  
+generatePassword()
+  
+
 // if user does not choose "ok" on all, alert "must choose at least one"
 // store respones in variables
 // store uppercase letters in a variable - array
@@ -107,4 +73,4 @@ generatePassword()
 // return password string
 
 
-//console.log(Math.floor(Math.random() * 8 /* Charactervalue// */))
+//console.log(Math.floor(Math.random() * 8 /* Charactervalue// */)
