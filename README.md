@@ -2,13 +2,16 @@
 
 [Visit the Deployed Site](https://azurek17.github.io/js-password-gen/)
 
-## Technoloy used:
+![js-password-gen](Screenshot.png)
+
+### Technoloy used:
 * JavaScript - If...Else - https://www.w3schools.com/jsref/jsref_if.asp
 * JavaScript - Logical Operators - https://www.w3schools.com/java/java_operators.asp
 * JavaScript - For Loop - https://www.w3schools.com/java/java_for_loop.asp
 * JavaScript - Math.random() - https://www.w3schools.com/jsref/jsref_random.asp
 
 ## Description
+
 A random password generator. Starter code was provide to modify to prompts a user with options to generates a strong random password automatically.
 
 ## Usage
@@ -21,42 +24,38 @@ This was complished by using Prompts, Alerts, If Else statements with comparisio
 
 Below are a few examples of code:
 
---------------------------------------------------------------------
+-------------------------------------------------
 
 ### Prompt:
 
-//javascript
+ javascript:
 
-var passwordLength = prompt( "message goes here");
+    var passwordLength = prompt( "message goes here");
 
-//
 
---------------------------------------------------------------------
+--------------------------------------------------
 
 ### Alert, Confirm, If Else, & comparison operator, and calling the function to restart:
 
-//javascript
+javascript:
 
-if (passwordLength < minLength || passwordLength > maxLength) { 
-      alert("ERROR - Pick a number between  " + minLength + " - " + maxLength);
-      generatePassword();
-     }
+    if (passwordLength < minLength || passwordLength > maxLength) { 
+          alert("ERROR - Pick a number between  " + minLength + " - " + maxLength);
+          generatePassword();
+        }
+        else {
+        var lowerCase = confirm(" add text here");
+        var upperCase = confirm("add text here");
+        var numCase = confirm("add text here");
+        var specialCase = confirm("add text here");
+        }
 
-     else {
-     var lowerCase = confirm(" add text here");
-     var upperCase = confirm("add text here");
-     var numCase = confirm("add text here");
-     var specialCase = confirm("add text here");
-     }
-//
-
----------------------------------------------------------------------
+---------------------------------------------------
 
 ### For Loop, Math.Random 
 
-//javascript 
+ javascript: 
 
-  
     var charSel = ""; 
     var trueValue = [];
 
@@ -73,15 +72,12 @@ if (passwordLength < minLength || passwordLength > maxLength) {
     password = trueValue.join ("");
     return password;
 
-//
-
 ------------------------------------------------------
 
-
-
 ## Credits
-* stater code provided: https://github.com/coding-boot-camp/friendly-parakeet
-* Tutoring Session
+* Stater code provided: https://github.com/coding-boot-camp/friendly-parakeet
+* Tutoring Session: Andres Jimenez
+* StudyGroup
 
 
 ----------------------------------------------------------------------------------

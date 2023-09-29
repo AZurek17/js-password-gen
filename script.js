@@ -33,37 +33,37 @@ function generatePassword() {
     if(!lowerCase && !upperCase && !numCase && !specialCase) {
       alert("YOU MUST CHOOSE AT LEAST ONE CHARACTER TYPE!!!!!");
       alert("Lets try again");
-      generatePassword();}
+      generatePassword();
       }
+    }
 
     // created empty vars 
     var charSel = ""; 
-    var trueValue = [];
+    var passValue = [];
 
     // using String Method with concat, to join two or more strings and set emtpy var charSel
     if (lowerCase) {
       charSel = charSel.concat(lowerChar); console.log();
     }
-    if (upperChar) {
+    if (upperCase) {
       charSel = charSel.concat(upperChar); console.log();
     }
-    if (numChar) {
+    if (numCase) {
       charSel = charSel.concat(numChar); console.log();
     }
-    if (specialChar) {
+    if (specialCase) {
       charSel = charSel.concat(specialChar); console.log();
     }
     // creating for loop for string and setting empty var vauleTrue 
     for (var i =0; i < passwordLength; i++){
-    trueValue.push(charSel[Math.floor(Math.random() * charSel.length)]);
+    passValue.push(charSel[Math.floor(Math.random() * charSel.length)]);
     }
     // setting emty var to creating for loop for string
-    password = trueValue.join ("");
+    password = passValue.join ("");
     return password;
 }
 }
-
-
+// [lowerChar]Math.floor(math.random)(8)
 
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
@@ -76,61 +76,3 @@ function writePassword() {
 
   passwordText.value = password;
 }
-
-
-
-
- //randomPassword()   
-
-/*lowerCaseChar//
-    var lowerCaseChar = ["abcdefghijklmnopqustuvwxyz"];
-    var upperCaseChar = ["ABCDEFGHIJKLMNOPQURSTVWYZ"];
-    var numCaseChar = ["0123456789"];
-    var specialCaseChar = ["!@#$%^&*()_+"];
-    
-    //
-  
-    //randomPassword()
-  
-      //if (isNAN(generatePassword))
-      //console.log(randomPasswod(3)
-      //   Math.random() .toString(2).lowerCaseChar +
-      //   Math.random() .toString(2).upperCaseChar +
-      //   Math.random() .toString(2).lowerCaseChar +
-      //   Math.random() .toString(2).upperCaseChar);
-      //   //.toUpperCase() .slice (2)
-        //.toLowerCase() .slice (4);
-        //.numCaseChar() .slice (0)
-        //.specialCaseChar() .splice (6));
-        // .upperCaseChar() .slice (4)+
-        // .numCaseChar() .slice (6)+
-        // .specialCaseChar() .splice (8)+;
-    
-     
-     
-  // add above later
-      
-    
-  
-  //generatePassword();
-  //randomPassword();
-    
-
-    //console.log(Math.floor(Math.random() * 8 /* Charactervalue// */
-
-    
-
-   
-// prompt user with a questions about password charcters and store respones in variables
-// if user does not choose "ok" on all, alert "must choose at least one"
-// store respones in variables
-// store uppercase letters in a variable - array
-// store lowercase letters in a variable - array
-// store numbers in a variable - array
-// store special characters in a variable -  array
-// declare an empty string
-// combine predefined stored values that can be in the password in a string
-// create a for loop, with users charater amount as the number of max characters select the loop wiill execute
-// in the loop push the string[random index] into empty array
-// once loop is completed, creaete string from the array
-// return password string
