@@ -1,23 +1,5 @@
-// Assignment code here
-
-
-// Get references to the #generate element
-var generateBtn = document.querySelector("#generate");
-
-// Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
-
-  passwordText.value = password;
-
-}
-
-// Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
-
-//Psuedocode
 // create function - generatePassword
+//var generateBtn = document.querySelector("#generate");
 var minLength = 8;
 var maxLength = 128;
 
@@ -28,67 +10,80 @@ function generatePassword() {
       alert("Pick a number between  " + minLength + " - " + maxLength);
       generatePassword();
      }
+     //else if (isNaN(passwordLength)) alert ("Must be a number, NOT a letter or symbol");
+
      else {
-     var lowerCase = confirm("Do you want to use lowercase characters? OK = YES, Cancel = NO");
+     var lowerCase = confirm("Do you want to use lowercase characters? OK = YES, / Cancel = NO");
      console.log(lowerCase);
-     var upperCase = confirm("Do you want to use uppercase characters? OK = YES Cancel = NO");
+     var upperCase = confirm("Do you want to use uppercase characters? OK = YES / Cancel = NO");
      console.log(upperCase);
-     var numCase = confirm("Do you want to use numeric characters? OK = YES Cancel = NO");
+     var numCase = confirm("Do you want to use numeric characters? OK = YES / Cancel = NO");
      console.log(numCase);
-     var specialCase = confirm("Do you want to use special characters? OK = YES Cancel = NO");
+     var specialCase = confirm("Do you want to use special characters? OK = YES / Cancel = NO");
      console.log(specialCase);
      charCase();
 
+    var lowerChar = "abcdefghijklmnopqustuvwxz";
+    var upperChar = "ABCDEFGHIJKLMNOPQURSTVWYZ";
+    var numChar ="1234567890";
+    var specialChar ="!@#$%^&*()+-";
+
     function charCase() {
-      if(lowerCase == upperCase == numCase == specialCase) {
-        alert("YOU MUST CHOOSE AT LEAST ONE CHARACTER TYPE!!!!!");
-        alert("Lets try again");
-        generatePassword();
-         }
-        }
-     
-    }
-  }
+    if(!lowerCase && !upperCase && !numCase && !specialCase) {
+      alert("YOU MUST CHOOSE AT LEAST ONE CHARACTER TYPE!!!!!");
+      alert("Lets try again");
+      generatePassword();}
+      }
 
-
-  function randomPassword() {
-      
-    lowerstr ["abcdefghijklmnopqustuvwxyz"] = Math.floor(Math.random()*35);
-    console.log(lowerCaseChar(35));
-    Upperstr ["ABCDEFGHIJKLMNOPQURSTVWYZ"] = Math.floor(Math.random()*35);
-    console.log(lowerCaseChar(35));
-    numstr [numCaseaseChar] = Math.floor(Math.random()*35);
-    console.log(lowerCaseChar(35));
-    specialstr [specialCaseCaseChar] = Math.floor(Math.random()*35);
-    console.log(lowerCaseChar(35));
-  }
-    //  if (charSelc = false){
-    //     charSelc()
-
-
-      
-      
-      
-      
-      //lowerCase===false || upperCase===false || numCase === false || specialCase === false) {
-      
-      //
-      //generatePassword();
+    // var lowerChar = "abcdefghijklmnopqustuvwxz";
+    // var upperChar = "ABCDEFGHIJKLMNOPQURSTVWYZ";
+    // var numChar ="1234567890";
+    // var specialChar ="!@#$%^&*()+-";
     
+   
+    var charSel = "";
+    var vauleTrue = [];
+
+    if (lowerCase) {
+      charSel = charSel.concat(lowerChar); console.log();
+    }
+    if (upperChar) {
+      charSel = charSel.concat(upperChar); console.log();
+    }
+    if (numChar) {
+      charSel = charSel.concat(numChar); console.log();
+    }
+    if (specialChar) {
+      charSel = charSel.concat(specialChar); console.log();
+    }
+
+    for (var i =0; i < passwordLength; i++){
+      vauleTrue.push(charSel[Math.floor(Math.random() * charSel.length)]);
+    }
   
+    password = vauleTrue.join ("");
+    return password;
+ // }
+}
+}
 
-      // else { 
-      //   var lowerCase = confirm("Do you want to use lowercase characters?")
-      //   var upperCase = confirm("Do you want to use uppercase characters?");
-      //   var numCase = confirm("Do you want to use numeric characters?");
-      //   var specialCase = confirm("Do you want to use special characters?");
-      // }
+//generatePassword();
 
-                
-      
-       
+// Get references to the #generate element
+var generateBtn = document.querySelector("#generate");
+// Add event listener to generate button
+generateBtn.addEventListener("click", writePassword);
+// Write password to the #password input
+function writePassword() {
+  var password = generatePassword();
+  var passwordText = document.querySelector("#password");
 
- generatePassword() 
+  passwordText.value = password;
+}
+
+
+
+
  //randomPassword()   
 
 /*lowerCaseChar//
@@ -123,7 +118,7 @@ function generatePassword() {
   
   //generatePassword();
   //randomPassword();
-    //for (var 1 =0; i<passwordLength; i++) {
+    
 
     //console.log(Math.floor(Math.random() * 8 /* Charactervalue// */
 
